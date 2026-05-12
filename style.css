@@ -683,19 +683,19 @@ strong {
     position: relative;
 }
 
-/* Mask the "Made with Tally" badge — cross-origin iframe, overlay only.
-   bottom: 2.5rem offsets for the container's padding-bottom so the overlay
-   sits flush with the iframe's bottom edge; height covers the badge + gutter. */
-.form-container::after {
-    content: '';
-    position: absolute;
-    bottom: 2.5rem;
-    right: 0;
-    width: 200px;
-    height: 60px;
-    background: var(--bg);
-    pointer-events: none;
-    z-index: 10;
+/* Clip the "Made with Tally" badge — polygon cuts the bottom-right corner
+   of the iframe using percentages, so it tracks correctly as dynamicHeight
+   resizes the iframe between form pages. */
+.form-container iframe {
+    display: block;
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% calc(100% - 60px),
+        calc(100% - 220px) calc(100% - 60px),
+        calc(100% - 220px) 100%,
+        0% 100%
+    );
 }
 
 
