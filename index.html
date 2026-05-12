@@ -339,18 +339,26 @@
 
         <!-- Tally Form Embed -->
         <div class="form-container">
-            <!--
-                Replace this placeholder with your Tally embed:
-                <iframe data-tally-src="https://tally.so/embed/[FORM_ID]?alignLeft=1&hideTitle=1&transparentBackground=1"
-                    loading="lazy" width="100%" height="auto" frameborder="0" marginheight="0" marginwidth="0"
-                    title="KiteBoston Application"></iframe>
-                <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-            -->
-            <div class="form-placeholder" role="status">
-                <span class="mono">[ TALLY_FORM_EMBED ]</span>
-                <p>Application form loads here. Replace this block with your Tally embed code.</p>
-                <p class="form-fields-ref mono">Fields: Name · Email · Phone · Experience Level · Goals · Availability · Weight · Water Comfort · +1 Option</p>
-            </div>
+            <iframe
+                data-tally-src="https://tally.so/embed/q4oeOO?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                loading="lazy"
+                width="100%"
+                height="300"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
+                title="KiteBoston — Student Intake"
+            ></iframe>
+            <script>
+                var d=document,w="https://tally.so/widgets/embed.js",
+                v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():
+                d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(
+                (function(e){e.src=e.dataset.tallySrc}))};
+                if("undefined"!=typeof Tally)v();
+                else if(d.querySelector('script[src="'+w+'"]')==null){
+                var s=d.createElement("script");s.src=w;s.onload=v;
+                s.onerror=v;d.body.appendChild(s)}
+            </script>
         </div>
 
         <div class="divider"></div>
