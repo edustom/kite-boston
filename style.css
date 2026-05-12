@@ -683,14 +683,16 @@ strong {
     position: relative;
 }
 
-/* Mask the "Made with Tally" badge — cross-origin iframe, overlay only */
+/* Mask the "Made with Tally" badge — cross-origin iframe, overlay only.
+   bottom: 2.5rem offsets for the container's padding-bottom so the overlay
+   sits flush with the iframe's bottom edge; height covers the badge + gutter. */
 .form-container::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 2.5rem;
     right: 0;
-    width: 160px;
-    height: 42px;
+    width: 200px;
+    height: 60px;
     background: var(--bg);
     pointer-events: none;
     z-index: 10;
