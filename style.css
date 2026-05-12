@@ -680,6 +680,20 @@ strong {
 /* Form container */
 .form-container {
     padding: 2.5rem 0;
+    position: relative;
+}
+
+/* Mask the "Made with Tally" badge — cross-origin iframe, overlay only */
+.form-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 160px;
+    height: 42px;
+    background: var(--bg);
+    pointer-events: none;
+    z-index: 10;
 }
 
 
